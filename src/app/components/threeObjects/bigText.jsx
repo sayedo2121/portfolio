@@ -6,7 +6,7 @@ import { FontLoader } from 'three/addons/loaders/FontLoader.js';
 import HelveticaFont from 'three/examples/fonts/droid/droid_sans_bold.typeface.json'
 import {gsap} from 'gsap';
 
-export default function getBigText(scene: any) {
+export default function getBigText(scene) {
     const loader = new FontLoader();
     const bigTextFont = loader.parse(HelveticaFont);
 
@@ -26,12 +26,12 @@ export default function getBigText(scene: any) {
 
 }
 
-export function animateBigTextIn(bigText: THREE.Object3D){
+export function animateBigTextIn(bigText){
     gsap.to(bigText.position, {z: -15, ease: "Power2.out"})
     gsap.to(bigText.material, {opacity: 1.0, ease: "Power2.out", delay: 0.1})
 }
 
-export function animateBigTextOut(bigText: THREE.Object3D){
+export function animateBigTextOut(bigText){
     gsap.to(bigText.position, {z: 50, ease: "Power4.in", delay: 0.05})
     gsap.to(bigText.material, {opacity: 0.0, ease: "expo.out"})
 }

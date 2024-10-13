@@ -6,7 +6,7 @@ import getManikin from './threeObjects/manikin';
 
 export default function ManikinAvatar() {
 
-    const containerRef = useRef<HTMLDivElement>(null);
+    const containerRef = useRef(null);
 
     useEffect(() => {
         if (typeof window !== 'undefined') {

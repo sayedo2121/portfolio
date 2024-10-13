@@ -6,9 +6,9 @@ import { FontLoader } from 'three/addons/loaders/FontLoader.js';
 import HelveticaFont from 'three/examples/fonts/droid/droid_sans_bold.typeface.json'
 
 const NUMBEROFROCKS = 15;
-let nextJSText:THREE.Object3D;
-let BuiltWithText:THREE.Object3D;
-let reactText:THREE.Object3D;
+let nextJSText
+let BuiltWithText
+let reactText
 
 export default function getRocks(){
     let rocks = new THREE.Object3D();
@@ -38,7 +38,7 @@ export default function getRocks(){
     return rocks;
 }
 
-function createRock(x: number, y: number, z: number){
+function createRock(x, y, z){
     let rockGeometry = new THREE.TetrahedronGeometry(Math.floor(Math.random() * 6) + 1.5, Math.floor(Math.random() * 2) + 1);
     let rockMaterial = new THREE.MeshLambertMaterial({ color: 0x222d4a, flatShading: true });
 
@@ -47,7 +47,7 @@ function createRock(x: number, y: number, z: number){
     return rock;
 }
 
-function createText(text:string, x: number, y: number, z: number){
+function createText(text, x, y, z){
     const loader = new FontLoader();
     const bigTextFont = loader.parse(HelveticaFont);
 
@@ -62,8 +62,8 @@ function createText(text:string, x: number, y: number, z: number){
     return textMesh;
 }
 
-export function animateRocks(rocks: THREE.Object3D){
-    rocks.children.forEach((rock: THREE.Object3D) => {
+export function animateRocks(rocks){
+    rocks.children.forEach((rock) => {
         if(nextJSText && nextJSText != rock
             && reactText && reactText != rock
             && BuiltWithText && BuiltWithText != rock
@@ -75,6 +75,6 @@ export function animateRocks(rocks: THREE.Object3D){
     rocks.position.x -= 0.01
 }
 
-export function scrollRocks(rocks: THREE.Object3D, delta: number){
+export function scrollRocks(rocks, delta){
     rocks.position.x -= delta*0.005;
 }

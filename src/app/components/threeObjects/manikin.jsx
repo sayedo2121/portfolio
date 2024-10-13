@@ -89,7 +89,7 @@ function getRightLeg() {
     return rightLeg;
 }
 
-export function animateManikin(manikin: THREE.Object3D) {
+export function animateManikin(manikin) {
     manikin.rotation.x += 0.002;
     manikin.rotation.y += 0.002;
 

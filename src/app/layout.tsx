@@ -1,14 +1,11 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import Cursor from "./components/Cursor";
 import "./globals.css";
 import { Toaster } from "react-hot-toast";
 
-const inter = Inter({ subsets: ["latin"] });
-
 export const metadata: Metadata = {
   title: "Sayed Portfolio",
-  description: "Pushing All Boundries",
+  description: "Sayed's little knock in space",
 };
 
 export default function RootLayout({
@@ -19,7 +16,7 @@ export default function RootLayout({
 
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className=''>
         <Cursor />
         <div><Toaster/></div>
         <main className="w-full h-screen">

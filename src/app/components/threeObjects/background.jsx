@@ -17,7 +17,7 @@ export default function getBackground() {
         }
     }
 
-    firstMesh.children.forEach((c: any) => {
+    firstMesh.children.forEach((c) => {
         c.rotation.x = Math.floor(Math.random() * 10);
         let scaleRandom = Math.floor(Math.random() * 2) + 1;
         c.scale.x += scaleRandom == 1? 0: 0.1;
@@ -28,7 +28,7 @@ export default function getBackground() {
     return firstMesh;
 }
 
-function getMesh(x: number, y: number, z: number) {
+function getMesh(x, y, z) {
     let mesh = new THREE.Mesh(bgGeometry, bgMaterial);
     mesh.position.set(x, y, z);
     return mesh;

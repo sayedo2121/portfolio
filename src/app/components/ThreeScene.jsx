@@ -13,7 +13,7 @@ import { usePathname, useRouter } from "next/navigation";
 import Links from "./Links";
 
 function ThreeScene() {
-  const containerRef = useRef<HTMLDivElement>(null);
+  const containerRef = useRef(null);
   const [manikinClicked, setManikinClicked] = useState(false);
   const path = usePathname();
   const mobileBreakpoint = 640;
@@ -168,7 +168,7 @@ function ThreeScene() {
       animate();
 
       // mouseclick
-      const onMouseClick = (event: any) => {
+      const onMouseClick = (event) => {
         if (window.innerWidth > mobileBreakpoint) {
           if (mouseOverManikin) {
             setManikinClicked(true);
@@ -192,7 +192,7 @@ function ThreeScene() {
       threeContainer?.addEventListener("click", onMouseClick, true);
 
       //mousemove
-      const onPointerMove = (event: any) => {
+      const onPointerMove = (event) => {
         // calculate pointer position in normalized device coordinates
         // (-1 to +1) for both components
 
@@ -202,7 +202,7 @@ function ThreeScene() {
       window.addEventListener("mousemove", onPointerMove);
 
       //scroll
-      const onMouseScroll = (event: WheelEvent) => {
+      const onMouseScroll = (event) => {
         scrollDelta = event.deltaY;
         scrollAmount += scrollDelta;
       };
@@ -210,7 +210,7 @@ function ThreeScene() {
 
       let last_pos_x = window.innerWidth;
       //resize
-      const handleResize = (event: Event) => {
+      const handleResize = (event) => {
         let diff_x = window.innerWidth - last_pos_x;
         last_pos_x = window.innerWidth;
 
