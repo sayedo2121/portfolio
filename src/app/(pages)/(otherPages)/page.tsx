@@ -44,10 +44,10 @@ export default function rootPage() {
             : "PRESSURISING YOUR SPACE SUIT..."}
         </p>
         <div className="loadingBar w-1/2 h-[1.5px] rounded-full bg-black mt-4 flex flex-row items-center justify-center">
-          <div className="w-0 h-full rounded-full bg-sky-800"></div>
+          <div className={`${loadingFinished?'w-full': 'w-5'} h-full rounded-full bg-sky-800`}></div>
         </div>
         {loadingFinished && (
-          <Link href={"/home"} prefetch={true} className="absolute bottom-10 mt-32">
+          <Link href={"/home"} prefetch={false} className="absolute bottom-10 mt-32">
             <button
               onClick={soundOnFunction}
               className="startButton opacity-0 rounded-lg text-white px-10 py-2 border-2 border-sky-800/20 bg-gradient-to-tr from-sky-800/50 to-indigo-900/50"
