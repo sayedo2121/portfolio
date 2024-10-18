@@ -111,13 +111,13 @@ function ThreeScene() {
 
         raycaster.setFromCamera(pointer, camera);
         const intersects = raycaster.intersectObjects(scene.children, true);
-        if (intersects.length > 0) {
           if (
             path == "/home" ||
             (path != "/home" && document.documentElement.scrollTop < window.innerHeight / 7)
           ) {
             //manikin hover
-            if (intersects[0].object.parent == manikin) {
+            console.log(intersects[0])
+            if (intersects.length > 0 && intersects[0].object.parent == manikin) {
               // if (
               //   (window.innerWidth > mobileBreakpoint &&
               //     !mouseOverManikin &&
@@ -151,7 +151,6 @@ function ThreeScene() {
                 animateBigTextOut(bigText);
             }
           }
-        }
 
         if (
           (window.innerWidth > mobileBreakpoint && mouseOverManikin) ||
