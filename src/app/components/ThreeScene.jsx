@@ -77,8 +77,8 @@ function ThreeScene() {
       const manikin = getManikin();
       scene.add(manikin);
       manikin.layers.set(1);
-      const background = getBackground();
-      scene.add(background);
+      // const background = getBackground();
+      // scene.add(background);
       const rocks = getRocks();
       scene.add(rocks);
       rocks.layers.set(1);
