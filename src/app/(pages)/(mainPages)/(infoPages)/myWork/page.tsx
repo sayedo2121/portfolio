@@ -1,8 +1,22 @@
 "use client";
 
+import Link from "next/link";
+
 export default function Page() {
   return (
     <div className="flex flex-col gap-28">
+      <div className="projects">
+      <div className="mb-10 text-2xl">
+          <h1 className="font-bold">Projects</h1>
+        </div>
+        <div className="flex flex-row">
+          <Link href={"https://isotops-zxd7.vercel.app/"} target="_blank">
+          <div className="isotops w-52 h-32 rounded-lg bg-isotops text-black flex flex-row items-center justify-center">
+            <h2 className="font-bold">ISOTOPS</h2>
+          </div>
+          </Link>
+        </div>
+      </div>
       <div className="experience">
         <div className="mb-10 text-2xl">
           <h1 className="font-bold">Work Experience</h1>

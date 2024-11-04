@@ -11,6 +11,7 @@ const config: Config = {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        isotops: "rgba(255, 191, 0, 1)"
       },
       spacing: {
         '85%': '85%',
